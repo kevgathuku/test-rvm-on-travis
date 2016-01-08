@@ -15,4 +15,4 @@ notifications:
   email: false
 
 before_install:
-  - gem install bundler
+  - rvm get master
