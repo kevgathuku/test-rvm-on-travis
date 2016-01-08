@@ -15,7 +15,7 @@ env:
 before_install:
   - rm $rvm_path/user/db
   - rvm get master
-  - source ~/.rvm/scripts/rvm
+  - rvm alias list
   - rvm list known
   - echo $(rvm strings $RUBY)
   - rvm use rvm use $(rvm strings $RUBY) --install --binary --debug
