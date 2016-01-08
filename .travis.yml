@@ -15,6 +15,7 @@ env:
 before_install:
   - rm $rvm_path/user/db
   - rvm get master
+  - rvm reload
   - rvm list known
   - echo $(rvm strings $RUBY)
   - rvm use rvm use $(rvm strings $RUBY) --install --binary --debug
