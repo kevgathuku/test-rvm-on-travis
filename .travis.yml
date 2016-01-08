@@ -14,6 +14,7 @@ env:
 
 before_install:
   - rvm get master
+  - rvm list known
   - rvm use $RUBY --install --binary --fuzzy
 
 notifications:
