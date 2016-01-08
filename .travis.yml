@@ -13,10 +13,9 @@ env:
     - RUBY=ruby-head
 
 before_install:
-  - rvm get master
   - rm $rvm_path/user/db
-  - rvm use $RUBY --install --binary --fuzzy --debug
-
+  - rvm get master
+  - rvm use $RUBY --install
 
 notifications:
   email: false
