@@ -14,5 +14,5 @@ rvm:
 notifications:
   email: false
 
-before_install:
+before_rvm:
   - rvm get master
