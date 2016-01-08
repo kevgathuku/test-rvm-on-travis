@@ -11,5 +11,9 @@ env:
   - RUBY_VERSION=2.3
   - RUBY_VERSION=ruby-head
 
+before_install:
+  - rvm get master
+  - rvm use $RUBY_VERSION --install --binary --fuzzy
+
 notifications:
   email: false
