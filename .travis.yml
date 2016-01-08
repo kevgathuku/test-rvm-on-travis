@@ -16,6 +16,7 @@ before_install:
   - rvm get master
   - rvm version
   - which rvm
+  - cat ~/.rvmrc
   - rvm use $RUBY --install --binary --fuzzy --debug
 
 notifications:
