@@ -14,9 +14,7 @@ env:
 
 before_install:
   - rvm get master
-  - rvm version
-  - cat $rvm_path/user/db
-  - rvm reload
+  - rm $rvm_path/user/db
   - rvm use $RUBY --install --binary --fuzzy --debug
 
 
