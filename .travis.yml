@@ -15,7 +15,8 @@ env:
 before_install:
   - rm $rvm_path/user/db
   - rvm get master
-  - rvm use $RUBY --install --remote
+  - rvm install $RUBY
+  - rvm use $RUBY
 
 notifications:
   email: false
