@@ -13,7 +13,6 @@ env:
     - RUBY=ruby-head
 
 before_install:
-  - rm $rvm_path/user/db
   - rvm get master
   - rvm alias delete $RUBY
   - rvm use $(rvm strings $RUBY) --install --binary
