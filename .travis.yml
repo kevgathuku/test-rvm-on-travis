@@ -13,9 +13,10 @@ env:
     - RUBY=ruby-head
 
 before_install:
+  - cat $rvm_path/user/db || echo "No file"
   - rvm get master
   - rvm alias delete $RUBY
-  - rvm use $(rvm strings $RUBY) --install --binary
+  - rvm use $(rvm strings $RUBY) --install --binary --debug
 
 notifications:
   email: false
