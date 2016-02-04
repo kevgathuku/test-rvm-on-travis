@@ -3,21 +3,13 @@ sudo: false
 
 script: ruby test.rb
 
-env:
-  matrix:
-    - RUBY=1.9.3
-    - RUBY=2.0
-    - RUBY=2.1
-    - RUBY=2.2
-    - RUBY=2.3
-    - RUBY=ruby-head
-
-before_install:
-  - cat $rvm_path/user/db || echo "No file"
-  - rvm get master
-  - rvm alias delete $RUBY
-  - echo $(rvm strings $RUBY)
-  - rvm use $(rvm strings $RUBY) --install --binary --debug
+rvm:
+  - 1.9.3
+  - 2.0
+  - 2.1
+  - 2.2
+  - 2.3
+  - ruby-head
 
 notifications:
   email: false
